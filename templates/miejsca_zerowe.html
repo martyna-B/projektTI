@@ -1,0 +1,58 @@
+{% extends 'main.html' %} 
+{% block content %}
+<p>
+        <h1>Miejsca zerowe funkcji kwadratowych</h1>
+        Zajmijmy się teraz poszukiwaniem miejsc zerowych funkcji kwadratowej. Są to takie współrzędne X, dla których wartość funkcji jest równa 0. <br>
+        Równoważnie można powiedzieć, że są to takie "iksy", dla których wykres funkcji przecina się z osią OX.
+
+        Spójrzmy na fragmenty wykresów kilku funkcji: <br><br>
+
+        <u1>
+            <li>\(f(x) = x^2 - 3x + 2\)  <br>
+            <div id="box1" class="jxgbox" style="width:300px; height:300px;"></div>
+            <script type="text/javascript">
+                var board1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-2, 10, 5, -4], axis:true});
+                var graph1 = board1.create('functiongraph',
+                          [function(x){ return x*x -3*x + 2;}, ]
+                          );
+            </script><BR>
+            <li>\(g(x) = -\frac{1}{3}x^2 + 3x + 4\) <br>
+            <div id="box2" class="jxgbox" style="width:300px; height:300px;"></div>
+            <script type="text/javascript">
+            var board2 = JXG.JSXGraph.initBoard('box2', {boundingbox: [-9, 6, 0, -5], axis:true});
+            var graph2 = board2.create('functiongraph',
+                        [function(x){ return x*x*1/3 +3*x + 4;}, ]
+                        );
+            </script><BR>
+            <li>\(h(x) = x^2 - x + 1\) <br>
+            <div id="box3" class="jxgbox" style="width:300px; height:300px;"></div>
+            <script type="text/javascript">
+                var board3 = JXG.JSXGraph.initBoard('box3', {boundingbox: [-3, 7, 4, -4], axis:true});
+                var graph3 = board3.create('functiongraph',
+                            [function(x){ return x*x -x + 1;}, ]
+                            );
+            </script><BR>
+        </u1>
+    </p>
+    <p> Na podstawie wykresu funkcji z łatwością można wskazać miejsca zerowe, a przynajmniej z dużą dokładnością określić gdzie powinno być. <br>
+        Przykładowo dla funkcji \(f\) widzimy, że dla \(x = 1\) lub \(x = 2\) jej wartość wynosi 0. <br><br>
+
+        Nieco trudniej jest z funkcją \(g\). Na podstawie wykresu nie jesteśmy w stanie określić dokładnie, gdzie leżą miejsca zerowe tej funkcji. <br><br>
+
+        Funkcja \(h\) natomiast nie posiada w ogóle miejsc zerowych. Dlaczego? <br>
+        Z odpowiedzią na to pytanie śpieszy wyróżnik kwadratowy, czyli popularna "delta". Otóż ona określa czy i ile miejsc zerowych posiada dana funkcja. <br>
+
+        Są trzy możliwe przypadki:
+        <ul>
+            <li>Jeśli \(\Delta > 0\), to funkcja ma dwa miejsca zerowe.
+            <li>Jeśli \(\Delta = 0\), to funkcja ma jedno miejsce zerowe
+            <li>A jeżeli \(\Delta < 0\), to funkcja nie posiada miejsc zerowych.
+        </ul>
+
+        Jest kilka sposobów znalezienia miejsc zerowych. Jeden z nich już poznaliśmy - Szkicujemy i odczytujemy z wykresu. <br>
+        Czasami jednak ta metoda zawodzi. Jest dosyć czasochłonna, a w przypadku braku miejsc "kratowych" wręcz bezużyteczna. <br>
+
+        Najpewniejszy sposób na znalezienie miejsc zerowych to rozwiązanie równiania kwadratowego, czego nauczysz się w rozdziale "Równoważnie kwadratowe" <br>
+
+    </p>
+    {% endblock %}

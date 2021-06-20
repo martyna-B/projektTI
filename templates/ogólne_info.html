@@ -1,0 +1,89 @@
+{% extends 'main.html' %} 
+{% block content %}
+<h1>Funkcja kwadratowa</h1>
+<p>
+    Funkcją kwadratową nazywamy funkcję \(f(x) = ax^2 + bx + c\) , gdzie \(a \ne 0\). <BR><BR>
+    Oto przykładowe funkcje kwadartowe:
+    <ul>
+        <li>\(f(x) = \frac{1}{4}x^2 - x + 2\)
+        <li>\(f(x) = -x^2 + 3\)
+        <li>\(f(x) = 2x^2 - 3\)
+    </ul>
+    <h2>Wykresy funkcji kwadratowch</h2>
+    Spójrzmy na wykresy powyższych funkcji kwadratowych: 
+    <ul>
+        <li>\(f(x) = \frac{1}{4}x^2 - x + 2\) <BR>
+            <div id="box1" class="jxgbox" style="width:300px; height:300px;"></div>
+            <script type="text/javascript">
+             var board1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-4, 9, 8, -1], axis:true});
+             var graph1 = board1.create('functiongraph',
+                       [function(x){ return 0.25*x*x-x+2;}, ]
+                    );
+            </script><BR>
+        <li>\(f(x) = -x^2 + 3\)
+            <div id="box2" class="jxgbox" style="width:300px; height:300px;"></div>
+            <script type="text/javascript">
+                var board2 = JXG.JSXGraph.initBoard('box2', {boundingbox: [-4.5, 6, 4.5, -12], axis:true});
+                var graph2 = board2.create('functiongraph',
+                          [function(x){ return -x*x + 3;}, ]
+                       );
+            </script><BR>
+        <li>\(f(x) = 2x^2 - 3\)
+            <div id="box3" class="jxgbox" style="width:300px; height:300px;"></div>
+            <script type="text/javascript">
+                var board3 = JXG.JSXGraph.initBoard('box3', {boundingbox: [-3, 7, 3, -5], axis:true});
+                var graph3 = board3.create('functiongraph',
+                          [function(x){ return 2*x*x - 3;}, ]
+                       );
+            </script><BR>
+    </ul>
+</p><p> Wykres każdej funkcji kwadratowej ma kształt paraboli. Niektóre są skierowane w dół, inne w górę, a także przecinają osie w innych punktach czy mają różne wierzchołki.
+To, jak będzie wyglądał wykres funkcji kwadratowej, zależy od jej współczynników: \(a, b, c\) . </p>
+<h2>Znaczenie współczynników funkcji kwadratowej</h2>
+<h4>1. Współczynnik \(a\):</h4>
+<ul>
+    <li> jeśli \(a > 0\), to ramiona paraboli skierowane są w górę,
+    <li> jeśli \(a < 0\), to ramiona paraboli skierowane są w dół. <BR>
+</ul>
+<p>Można zauważyć to na powyższych wykresach. <BR><BR>
+Ponadto, im większe \(|a|\), tym funkcja będzie szybciej rosła lub malała. Spójrzmy na wykresy dwóch funkcji: \(f(x) = x^2\) oraz \(f(x) = \frac{1}{4}x^2\):
+<div id="box4" class="jxgbox" style="width:250px; height:250px;"></div>
+            <script type="text/javascript">
+             var board1 = JXG.JSXGraph.initBoard('box4', {boundingbox: [-7, 9, 7, -4], axis:true});
+             var graph1 = board1.create('functiongraph',
+                       [function(x){ return x*x;}, ]
+                    );
+            </script>
+
+<div id="box5" class="jxgbox" style="width:250px; height:250px;"></div>
+<script type="text/javascript">
+ var board1 = JXG.JSXGraph.initBoard('box5', {boundingbox: [-7, 9, 7, -4], axis:true});
+ var graph1 = board1.create('functiongraph',
+           [function(x){ return 0.25*x*x;}, ]
+        );
+</script><BR></p>
+<h4>2. Współczynnik \(c\):</h4>
+<ul>
+    <li> jest równy miejscu przecięcia osi y przez wykres funkcji, czyli równy wartości \(f(0)\),
+    <li> definiuje przesunięcie wykresu funkcji względem osi x. <BR>
+</ul>
+<p>
+Spójrzmy na wykresy dwóch funkcji: \(f(x) = \frac{1}{2}x^2 + x + 2\) oraz \(f(x) = \frac{1}{2}x^2 + x - 2\)
+<div id="box6" class="jxgbox" style="width:250px; height:250px;"></div>
+<script type="text/javascript">
+ var board1 = JXG.JSXGraph.initBoard('box6', {boundingbox: [-6, 9, 4, -4], axis:true});
+ var graph1 = board1.create('functiongraph',
+           [function(x){ return 0.5*x*x + x + 2;}, ]
+        );
+</script><BR>
+<div id="box7" class="jxgbox" style="width:250px; height:250px;"></div>
+<script type="text/javascript">
+    var board1 = JXG.JSXGraph.initBoard('box7', {boundingbox: [-6, 9, 4, -4], axis:true});
+    var graph1 = board1.create('functiongraph',
+                  [function(x){ return 0.5*x*x + x - 2;}, ]
+               );
+</script><BR></p>
+<p>Wykresy tych funkcji mają ten sam kształt. Są jednak przesunięte względem osi x. Funkcja \(f(x) = \frac{1}{2}x^2 + x + 2\) przecina oś y w punkcie \((0,2)\),
+a funkcja \(f(x) = \frac{1}{2}x^2 + x - 2\) w punkcie \((0,-2)\).</p>
+
+{% endblock %}
