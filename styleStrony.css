@@ -1,0 +1,93 @@
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+    padding:0px; margin:0px;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+p {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 80px;
+  }
+
+H4 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 80px;
+    }
+
+ul {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-right: 150px;
+    margin-left: 80px;
+    }
+
+H1{
+    font-size: 26pt;
+    margin: 0.5em 0.1em;
+    text-align:center;
+    padding: 0.0em;
+    color:rgb(39, 16, 95);
+    page-break-before:auto;
+  }
+
+  H2{
+    font-size: 18pt;
+    margin: 0.5em 0.1em;
+    text-align:center;
+    padding: 0.0em;
+    color:rgb(39, 16, 95);
+    page-break-before:auto;
+  }
+
+  H3{
+    font-size: 14pt;
+    margin: 0.5em 0.1em;
+    text-align:center;
+    padding: 0.0em;
+    color:rgb(39, 16, 95);
+    page-break-before:auto;
+  }
+
+
+
+div#calosc{
+    width:1080px;
+    position:relative;
+    margin: 7px auto 100px auto;
+}
+
+
+
+div#prawy{
+    display:inline;
+    vertical-align:top;
+    width:810px;
+    text-align:left;    
+    font-size:13px; font-family:verdana, arial, sans-serif;
+}
+div#obrazekOpis{
+    padding-top:20px;
+    position:relative;    
+    padding-bottom:1px;
+    border:1px solid rgba(255, 255, 255, 0.0);
+    background-color:rgb(206, 197, 203) ;
+}
+
