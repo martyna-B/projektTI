@@ -6,6 +6,7 @@
         <script type="text/javascript" id="MathJax-script" async
         src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
         </script>
+        <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
         <title>Równania i nierówności kwadratowe</title>
 
     </head>
@@ -28,14 +29,42 @@
         </p>
         <h2>Nierówności kwadratowe</h2>
         <p>
-            <b>Nierównością kwadratową</b> (z niewiadomą \(x\)) nazywamy każdą nierówność, 
-            którą można doprowadzić do którejś z następujących postaci: 
+            <div><b>Nierównością kwadratową</b> (z niewiadomą \(x\)) nazywamy każdą nierówność, 
+            którą można doprowadzić do którejś z następujących postaci:
             <li>\(ax^2+bx+c\gt 0\)</li>
             <li>\(ax^2+bx+c\lt 0\)</li>
             <li>\(ax^2+bx+c\geq 0\)</li>
-            <li>\(ax^2+bx+c\leq 0\)</li><br>
-            przy czym \(a,b,c\) są ustalonymi liczbami rzeczywistymi i \(a\neq0\)
+            <li>\(ax^2+bx+c\leq 0\)</li>
+            przy czym \(a,b,c\) są ustalonymi liczbami rzeczywistymi i \(a\neq0\)</div>
         </p>
+        
+        <p>
+            Rozwiązaniem nierówności kwadratowej najczęściej jest przedział, do którego wyznaczenia można zastosować poniższą instrukcję:
+            <ol>
+                <li>Policzyć deltę</li>
+                <li>Znaleźć miejsca zerowe (jeśli są)</li>
+                <li>Narysować parabolę przechodzącą przez miejsca zerowe:</li>
+                <ul>
+                    <li>dla \(a\gt 0\) ramiona skierowane w górę</li>
+                    <li>dla \(a\lt 0\) ramiona skierowane w dół</li>
+                </ul>
+                <li>Dla następujących znaków mamy rozwiązania:</li>
+                <ul>
+                    <li>\(\gt / \geq x\) dla których część wykresu znajduje się <b>nad</b> osią \(OX\) (odpowiednio przedział otwarty/domknięty)</li>
+                    <li>\(\lt / \leq x\) dla których część wykresu znajduje się <b>pod</b> osią \(OX\) (odpowiednio przedział otwarty/domknięty)</li>
+                </ul>
+            </ol>
+        </p>
+
+        <h2>Wzory Viete'a</h2>
+        <p>
+            <div><b>Twierdzenie</b></div>
+            Jeśli \(x_1 ,x_2 \) są różnymi miejscami zerowymi funkcji kwadratowej \(y=ax^2+bx+c (a\neq 0)\), to zachodzą związki:
+            <li>\(x_1 + x_2 = \frac{-b}{a}\)</li>
+            <li>\(x_1 \cdot x_2 = \frac{c}{a}\)</li>
+
+        </p>
+
         <p>
             <h4>Przykład </h4>
             Rozwiąż równanie: \(x^2-x-6\)<br><br>
@@ -43,12 +72,30 @@
             $$a=1, b=-1, c=-6$$
             Obliczamy wyróżnik:<br>
             $$\Delta =(-1)^2-4\cdot 1\cdot (-6)=25;~~\sqrt{\Delta }=5 \gt 0$$
-            zatem równanie ma dwa różne rozwiązania:<br>
+            Zatem równanie ma dwa różne rozwiązania:<br>
             $$x_1 =\frac{-(-1)-5}{2\cdot 1}=-2,~~~x_2 =\frac{-(-1)+5}{2\cdot 1}=3$$<br>
-            więc rozwiązania to -2 i 3. 
+            Więc rozwiązania to -2 i 3. 
         </p>
         <p>
-            <div><b>Przykład 2</b></div>
+            <h4>Przykład </h4>
+            Rozwiąż nierówność: \(4x\geq x^2 \)<br><br>
+            Nierówność doprowadzamy do postaci \(x^2+bx+c \geq 0 (a\neq 0)\)
+            $$-x^2 - 4x \geq 0$$
+            Wyłączamy \(x\) przed nawias i odczytujemy miejsca zerowe
+            $$-x(x-4)\geq 0$$
+            $$x_1 =0,~~x_2=4$$
+            Współczynnik przy \(x^2\) jest ujemny, szkicujemy wykres funkcji i znaznaczamy \(x\) dla których wartości funkcji są nieujemne:
+            <div id="box1" class="jxgbox" style="width:600px; height:400px;"></div>
+                <script type="text/javascript">
+                    var board = JXG.JSXGraph.initBoard('box1', {boundingbox: [-2, 6, 6, -4], axis:true});
+                    var graph = board.create('functiongraph',
+                                [function(x){ return -x*x + 4*x;}, ]
+                            )
+                    var point1 = board.create('point', [4, 0],{name:'',size:2});
+                    var point2 = board.create('point', [0, 0],{name:'',size:2});
+                    var line1 = board.create('line',[[0,0],[4,0]], {straightFirst:false, straightLast:false, strokeWidth:1, strokeColor:'#ff0000'});
+                    
+                </script>
         </p>
         <p>
             <div><b>Przykład 3</b></div>
