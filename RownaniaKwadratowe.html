@@ -12,7 +12,7 @@
     </head>
     <body>
         <h1>Równania i nierówności kwadratowe</h1>
-        <p>Tutaj zostaną omówione równania i nierówności kwadratowe, a także przedstawione będą wzory vieta</p>
+        <p>Tutaj zostaną omówione równania i nierówności kwadratowe, a także pokazane będą wzory Viete'a</p>
 
         <h2>Równania kwadratowe</h2>
         <p>
@@ -62,7 +62,6 @@
             Jeśli \(x_1 ,x_2 \) są różnymi miejscami zerowymi funkcji kwadratowej \(y=ax^2+bx+c (a\neq 0)\), to zachodzą związki:
             <li>\(x_1 + x_2 = \frac{-b}{a}\)</li>
             <li>\(x_1 \cdot x_2 = \frac{c}{a}\)</li>
-
         </p>
 
         <p>
@@ -70,11 +69,28 @@
             Rozwiąż równanie: \(x^2-x-6\)<br><br>
             Wypisujemy współczynniki równania:
             $$a=1, b=-1, c=-6$$
-            Obliczamy wyróżnik:<br>
+            Obliczamy wyróżnik
             $$\Delta =(-1)^2-4\cdot 1\cdot (-6)=25;~~\sqrt{\Delta }=5 \gt 0$$
-            Zatem równanie ma dwa różne rozwiązania:<br>
-            $$x_1 =\frac{-(-1)-5}{2\cdot 1}=-2,~~~x_2 =\frac{-(-1)+5}{2\cdot 1}=3$$<br>
+            Zatem równanie ma dwa różne rozwiązania:
+            $$x_1 =\frac{-(-1)-5}{2\cdot 1}=-2,~~ x_2 =\frac{-(-1)+5}{2\cdot 1}=3$$
             Więc rozwiązania to -2 i 3. 
+        </p>
+
+        <p>
+            <h4>Przykład</h4>
+            Rozwiąż równanie: \(x^4 + 5x^2 -14=0\)<br><br>
+            Podstawiamy \(t\) za \(x^2\), otrzymujemy następujące równanie
+            $$t^2 +5t-14=0$$
+            Obliczamy deltę
+            $$\Delta =5^2-4\cdot 1\cdot (-14)=81;~~\sqrt{\Delta}=9$$
+            Zatem
+            $$t_1=\frac{-5-9}{2}=2,~~ t_2=\frac{-(-5)+9}{2}=-7$$
+            Czyli
+            $$x_1 ^2=2,~~ x_2 ^2=-7$$
+            Jednakże ponieważ \(x^2\geq 0, x^2\neq -7\), więc
+            $$x^2=2$$
+            $$x_1 =\sqrt{2},~~x_2 =-\sqrt{2}$$
+
         </p>
         <p>
             <h4>Przykład </h4>
@@ -85,9 +101,9 @@
             $$-x(x-4)\geq 0$$
             $$x_1 =0,~~x_2=4$$
             Współczynnik przy \(x^2\) jest ujemny, szkicujemy wykres funkcji i znaznaczamy \(x\) dla których wartości funkcji są nieujemne:
-            <div id="box1" class="jxgbox" style="width:600px; height:400px;"></div>
+            <div id="box0" class="jxgbox" style="width:600px; height:400px;"></div>
                 <script type="text/javascript">
-                    var board = JXG.JSXGraph.initBoard('box1', {boundingbox: [-2, 6, 6, -4], axis:true});
+                    var board = JXG.JSXGraph.initBoard('box0', {boundingbox: [-2, 6, 6, -4], axis:true});
                     var graph = board.create('functiongraph',
                                 [function(x){ return -x*x + 4*x;}, ]
                             )
@@ -98,7 +114,19 @@
                 </script>
         </p>
         <p>
-            <div><b>Przykład 3</b></div>
+            <h4>Przykład</h4>
+            Rozwiąż nierówność: \(5x^2 - 3x +2 \lt 0 \)<br><br>
+            Obliczymy wyróżnik
+            $$\Delta =(-3)^2-4\cdot 5\cdot 2=-31 \lt 0$$
+            Zatem nierówność nie ma miejsc zerowych.<br>
+            Ponieważ \(a=5\gt 0\), parabola znajduje się w całości nad osią \(OX\).
+            <div id="box1" class="jxgbox" style="width:600px; height:400px;"></div>
+                <script type="text/javascript">
+                    var board1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-4, 8, 4, -1], axis:true});
+                    var graph1 = board1.create('functiongraph',
+                                [function(x){ return 5*x*x -3*x+2;}, ]);
+                </script>
+            Wynika stąd, że \(x\in \emptyset \)
         </p>
     </body>
 </html>
