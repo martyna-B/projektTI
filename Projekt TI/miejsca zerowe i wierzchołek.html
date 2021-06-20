@@ -1,0 +1,133 @@
+<DOCTYPE! html>
+<html>
+<head>
+    <meta charset="utf">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+
+    <title>Funkcja kwadratowa</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" href="./styleStrony.css">
+
+</head>
+<body>
+        <div id="calosc">
+    
+    <div id="prawy">
+        <div id="obrazekOpis">
+    
+        <h2>Miejsca zerowe funkcji kwadratowych</h2>
+        <p>Zajmijmy się teraz poszukiwaniem miejsc zerowych funkcji kwadratowej. Są to takie współrzędne X, dla których wartość funkcji jest równa 0. <br>
+        Równoważnie można powiedzieć, że są to takie "iksy", dla których wykres funkcji przecina się z osią OX.
+
+        Spójrzmy na fragmenty wykresów kilku funkcji: </p>
+
+        <ul>
+            <li>\(f(x) = x^2 - 3x + 2\)  <br>
+                <div id="box1" class="jxgbox" style="width:300px; height:300px;"></div>
+                <script type="text/javascript">
+                    var board1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-2, 10, 5, -4], axis:true});
+                    var graph1 = board1.create('functiongraph',
+                            [function(x){ return x*x -3*x + 2;}, ]
+                            );
+                </script><BR>
+            <li>\(g(x) = -\frac{1}{3}x^2 + 3x + 4\) <br>
+                <div id="box2" class="jxgbox" style="width:300px; height:300px;"></div>
+                <script type="text/javascript">
+                var board2 = JXG.JSXGraph.initBoard('box2', {boundingbox: [-9, 6, 0, -5], axis:true});
+                var graph2 = board2.create('functiongraph',
+                            [function(x){ return x*x*1/3 +3*x + 4;}, ]
+                            );
+                </script><BR>
+            <li>\(h(x) = x^2 - x + 1\) <br>
+                <div id="box3" class="jxgbox" style="width:300px; height:300px;"></div>
+                <script type="text/javascript">
+                    var board3 = JXG.JSXGraph.initBoard('box3', {boundingbox: [-3, 7, 4, -4], axis:true});
+                    var graph3 = board3.create('functiongraph',
+                                [function(x){ return x*x -x + 1;}, ]
+                                );
+                </script><BR>
+        </ul>
+    
+    <p> Na podstawie wykresu funkcji z łatwością można wskazać miejsca zerowe, a przynajmniej z dużą dokładnością określić gdzie powinno być. <br>
+        Przykładowo dla funkcji \(f\) widzimy, że dla \(x = 1\) lub \(x = 2\) jej wartość wynosi 0. <br><br>
+
+        Nieco trudniej jest z funkcją \(g\). Na podstawie wykresu nie jesteśmy w stanie określić dokładnie, gdzie leżą miejsca zerowe tej funkcji. <br><br>
+
+        Funkcja \(h\) natomiast nie posiada w ogóle miejsc zerowych. Dlaczego? <br>
+        Z odpowiedzią na to pytanie śpieszy wyróżnik kwadratowy, czyli popularna "delta". Otóż ona określa czy i ile miejsc zerowych posiada dana funkcja. <br>
+
+        Są trzy możliwe przypadki:
+        <ul>
+            <li>Jeśli \(\Delta > 0\), to funkcja ma dwa miejsca zerowe.
+            <li>Jeśli \(\Delta = 0\), to funkcja ma jedno miejsce zerowe
+            <li>A jeżeli \(\Delta < 0\), to funkcja nie posiada miejsc zerowych.
+        </ul></p>
+
+        <p>Jest kilka sposobów znalezienia miejsc zerowych. Jeden z nich już poznaliśmy - Szkicujemy i odczytujemy z wykresu. <br>
+        Czasami jednak ta metoda zawodzi. Jest dosyć czasochłonna, a w przypadku braku miejsc "kratowych" wręcz bezużyteczna. <br>
+
+        Najpewniejszy sposób na znalezienie miejsc zerowych to rozwiązanie równiania kwadratowego, czego nauczysz się w rozdziale "Równoważnie kwadratowe" <br>
+        </p>
+    
+
+    <p>
+        <h2>Wierzchołek funkcji kwadratowej</h2>
+        <p>
+        Wiemy już, że wykresem funkcji kwadratowej jest parabola. Posiada ona dwa równe ramiona, które wychodzą spod jednego punktu - wierzchołka. <br>
+        Gdy znamy położenie tego punktu i wartość funkcji w tym punkcie, to jesteśmy w stanie wyczytać pewne ważne własności tej funkcji. <br> <br>
+
+        No dobrze, ale jak znaleźć ten punkt? Okazuje się, że mając wyprowadzony wzór ogólny funkcji kwadratowej \(f(x) = ax^2 + bx + c\) jesteśmy w stanie łatwo go uzyskać współrzędne punktu P = (p, q) ze wzoru: <br>
+        </p>
+            $$p = \frac{-b}{2a}$$
+            $$q = \frac{-\Delta}{4a}$$
+        
+
+        <p>Spójrzmy na przykład. Niech \(f(x) = x^2 - 4x + 3\) Policzmy współrzędne p i q punktu P wierzchołka:
+        </p>
+        
+             $$p = \frac{-(-4)}{2} = 2$$
+             $$q = \frac{-\Delta}{4} = \frac{-((-4)^2 - 4 \cdot 1 \cdot 3)}{4} = \frac{4}{4} = -1$$
+        
+        
+        <p>Stąd nasz punkt \(P = (2, -1)\)<br> <br>
+
+        Nie musimy liczyć współrzędnej \(q\) ze wzoru. Mając wyliczoną współrzędną p wystarczy wyliczyć wartość funkcji dla \(x = p\) <br>
+        Podstawiając do naszego przykładu: <br>
+        $$q = f(2) = 2^2 - 4\cdot 2 + 3 = 4 - 8 + 3 = -1$$ <br> <br>
+
+        Gdy już obliczymy współrzędne wierzchołka paraboli i znamy znak parametru \(a\), jesteśmy w stanie z łatwością wskazać zbiór wartości funkcji. Załóżmy, że wierzchołek \(P = (p, q)\) i Zbiór wartości funkcji to \(W\) . Wtedy mamy trzy przypadki: <br><br>
+        </p>
+        <ul>
+            <li> Gdy \(a < 0\), to \(W = (-\infty, q]\)
+            <li> A jeśli \(a > 0\), to \(W = [q, \infty)\)
+            <li> Jeśli \(a = 0\), to mamy do czynienia z funkcją liniową, czyli \(W = \mathbb{R}\)      
+        </ul>
+          
+        <br>
+
+        <p>Weźmy na przykład funkcję \(g(x) = 3x^2 -4x + 6\). Liczymy współrzędne wierzchołka p i q i określamy znak parametru \(a\): <br>
+        </p>
+        
+        $$p = \frac{4}{6} = \frac{2}{3}$$
+        $$q = f(p) = f(\frac{2}{3}) = 3\cdot(\frac{2}{3})^2 - 4\cdot\frac{2}{3} + 6 = 3\cdot\frac{4}{9} - \frac{8}{3} + \frac{18}{3} = \frac{4}{3} + \frac{10}{3} = \frac{14}{3}$$
+        $$a = 3 > 0$$
+        
+        <p>Stąd Zbiór wartości funkcji \(g\) to \(W = [\frac{14}{3}, \infty)\). <br><br>
+
+        Tak samo jak współrzędną \(q\) tak i współrzędną \(p\) jesteśmy w stanie policzyć bez standardowego wzoru. <br>
+        Jeśli znamy miejsca zerowe funkcji, to \(p\) możemy uzyskać z następującej własności: <br>
+        </p>
+            $$p = \frac{x_{1} - x_{2}}{2}$$
+        
+        <p>gdzie \(x_{1}, x_{2}\) to miejsca zerowe funkcji i \(x_{1} > x_{2}\) <br>
+        
+    </p>
+        </div><!-- obrazekOpis -->
+      </div><!-- prawy -->
+    </div>
+
+
+</body>

@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <title>Postacie funkcji kwadratowej</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
+    <link rel="stylesheet" href="./styleStrony.css">
+</head>
+
+<body data-google-affiliate-annotated="1">
+
+
+    <div id="calosc">
+    
+    <div id="prawy">
+        <div id="obrazekOpis">
+          
+<!--Krótki wstęp-->  
+    <H1>Postacie funkcji kwadratowej</H1>
+    <p>W tym rozdziale omówione zostaną trzy różne postacie funkcji kwadratowej - ogólna, kanoniczna, oraz iloczynowa.</p>
+
+<!--Postać ogólna-->    
+    <H2>Postać ogólna</H2>
+    <p>Funkcja kwadratowa w postaci ogólnej wyraża się wzorem $$f(x)=ax^2+bx+c$$ gdzie \(a,b,c\)
+     są współczynnikami funkcji i \(a \neq 0\).</p><BR><BR>
+
+
+<!--Postać kanoniczna-->
+    <H2>Postać kanoniczna</H2>
+    <p>Postać kanoniczna funkcji kwadratowej wyraża się następująco $$f(x)=a(x-p)^2+q$$ 
+    gdzie \(a,p,q\) są współczynnikami funkcji i \(a \neq 0\). Natomiast współczynniki \(p\) i \(q\) można wyliczyć korzystając z poniższych wzorów:
+    $$p=\frac{-b}{2a}$$  $$q=\frac{-(b^2-4ac)}{4a} = \frac{-\Delta}{4a}$$
+    gdzie \(a,b,c\) są odpowiednimi współczynnikami liczbowymi z postaci ogólnej.</p><BR><BR>
+    
+    <H3>Przekształcenie funkcji z postaci ogólnej do postaci kanonicznej</H3>
+    <p>Funkcję kwadratową \(f(x)=ax^2+bx+c\) można w łatwy sposób przekształcić do postaci kanonicznej. Poniżej
+    przedstawiam wyprowadzenie tej postaci:<BR><BR>
+
+    Najpierw wyłączamy przed nawias współczynnik \(a\) przy wyrazach z \(x\)
+    $$a(x+\frac{b}{a}x)+c$$
+    Następnie dodajemy i odejmujemy wyrażenie postaci \(\frac{b^2}{4a^2}\) i korzystamy ze wzoru skróconego
+    mnożenia na kwadrat sumy
+    $$a((x+\frac{b}{2a})^2-\frac{b^2}{4a^2})+c$$
+    Wyłączamy z nawiasu wyrażenie \(-\frac{b^2}{4a^2}\). Pamiętajmy o tym, aby je pomnożyć przez \(a\).
+    Ponadto zapisujemy \(c\) w postaci ułamka z mianownikiem \(4a\)
+    $$a(x+\frac{b}{2a})^2-\frac{b^2}{4a}+\frac{4ac}{4a}$$
+    Łączymy liczniki z ułamków
+    $$a(x+\frac{b}{2a})^2-\frac{b^2-4ac}{4a}$$
+    Na koniec podstawiamy współczynniki \(p\) i \(q\) do wyrażeń: \(p=-\frac{b}{2a}\), \(q=-\frac{b^2-4ac}{4a}\)
+    i otrzymujemy postać kanoniczną!
+    $$a(x-p)^2+q$$</p><BR>
+
+    <H4>Przykład</H4>
+    <p>Sprowadzimy funkcję \(f(x)=4x^2+16x+12\) do postaci iloczynowej.<BR><BR>
+    Nasze współczynniki\(a,b,c\) są równe odpowiednio \(4,16,12\). Wyliczamy ze wzorów współczynniki \(p\) i \(q\)
+    $$p=\frac{-b}{2a}=\frac{-16}{8}=-2$$
+    $$q=\frac{-(b^2-4ac)}{4a}=\frac{-64}{16}=-4$$
+    Podstawiamy wyniki do wzoru na postać kanoniczną i otrzymujemy wynik
+    $$f(x)=a(x-p)^2+q=4(x+2)^2-4$$</p><BR><BR>
+    
+    <p>Postać kanoniczna funkcji jest szczególnie pomocna w przypadku szkicowania wykresów funkcji - ponieważ liczby \(p,q\) są współrzędnymi
+    wierzchołka paraboli, łatwo zauważyć, że wykres funkcji  \(f(x)=a(x-p)^2+q\) to tak naprawde wykres funkcji \(g(x)=ax^2\) w translacji
+    o wektor \([p,q]\).</p><BR><BR>
+
+    <!--Przykładowy wykres-->
+
+    <H4>Przykład</H4>
+    <p>Rozważmy funkcję kwadratową w postaci kanonicznej \(f(x)=3(x-3)^2+5\). Jest to przesunięta
+    funkcja \(g(x)=3x ^2\) o wektor \([3,5]\). Zauważmy, że współrzędne wektora odpowiadają poszczególnym
+    współczynnikom liczbowym funkcji \(f\). Dla lepszego zobrazowania sytuacji zamieściłem poniżej wykres.<BR><BR><BR>
+    </p>
+    <center>
+    <div id="box1" class="jxgbox" style="width:600px; height:400px;"></div>
+    <script type="text/javascript">
+        var board = JXG.JSXGraph.initBoard('box1', {boundingbox: [-6, 18, 6, -3], axis:true});
+        var graph = board.create('functiongraph',
+                    [function(x){ return 3*x*x;}, ]
+                );
+        var graph2 = board.create('functiongraph',
+                    [function(x){ return 3*(x-3)**2+5;}, ],
+                    {strokeColor:'brown', fixed: false}
+                );
+        var vector = board.create('arrow',
+                    [[0,0], [3,5]],
+                    {strokeColor:'green', fixed: false}
+                );
+    </script><BR>
+    </center>
+
+    <p>Brązowa krzywa to nasza wyjściowa funkcja \(f\). Kolorem niebieskim została oznaczona parabola \(g\)
+    a zielona strzałka przedstawia wektor \([3,5]\) o jaki została przesunięta funkcja \(f\).</p>
+<!--Postać iloczynowa-->
+    <H2>Postać iloczynowa</H2>
+    <p>Funkcja kwadratowa w postaci iloczynowej przyjmuje postać $$f(x)=a(x-x_1)(x-x_2)$$ gdzie \(x_1\) i \(x_2\) są jej miejscami zerowymi,
+    natomiast \(a\) współczynnikiem liczbowym.
+    W szczególności, gdy \(\Delta=0\) to postać iloczynowa wygląda nieco inaczej:$$f(x)=a(x-x_0)^2$$ gdzie \(x_1\) jest jedynym rozwiązaniem
+    rzeczywistym tego równania. W przypadku gdy \(\Delta< 0\),  postać iloczynowa funkcji kwadratowej nie istnieje.<BR><BR>
+    
+    <H3>Przekształcenie funkcji z postaci ogólnej do iloczynowej</H3>
+    <p>Aby zapisać funkcję \(f(x)=ax^2+bx+c\) w postaci iloczynowej, musimy znać jej miejsca zerowe. W tym 
+    celu liczymy wyróżnik:
+    $$\Delta=b^2-4ac$$
+    Miejsca zerowe będą w punktach odpowiednio \(x_1=\frac{-b-\sqrt\Delta}{2a}\), oraz \(x_2=\frac{-b+\sqrt\Delta}{2a}\) (patrz równania kwadratowe).
+    Wstawiamy wynik do wzoru na postać iloczynową i otrzymujemy:</p>
+    <ul>
+        <li> \(f(x)=a(x-x_1)(x-x_2)=a(x-\frac{-b-\sqrt\Delta}{2a})(x-\frac{-b+\sqrt\Delta}{2a})\), 
+        w przypadku, gdy \(\Delta>0\)
+        <li> \(f(x)=a(x-x_0)^2=a(x-\frac{-b}{2a})^2\), w przypadku, gdy \(\Delta=0\)
+        <li> Gdy \(\Delta < 0\) to postać iloczynowa nie istnieje 
+    </ul>
+
+    <H4>Przykład</H4>
+    <p>Sprowadzić do postaci iloczynowej funkcję \(f(x)=5x^2+12x+7\).<BR><BR>
+    Aby sprowadzić funkcję do postaci iloczynowej, musimy obliczyć jej miejsca zerowe. Liczymy deltę:
+    $$\Delta=12^2-4\cdot5\cdot7=4>0$$  
+    Zatem funkcja \(f\) ma dwa miejsca zerowe. Wyliczamy je:
+    $$x_1=\frac{-12-\sqrt4}{2\cdot5}=-\frac{7}{5}$$ 
+    $$x_1=\frac{-12+\sqrt4}{2\cdot5}=-1$$   
+    Zatem postać iloczynowa wygląda następująco:
+    $$f(x)=5(x+\frac{7}{5})(x+1)$$</p><BR>
+
+    <p>Postać iloczynowa funkcji jest wygodnym narzędziem, stosowanym w poszukiwaniu miejsc zerowych funkcji kwadratowej. 
+    Przyrównując funkcję \(f(x)=a(x-x_1)(x-x_2)\) do zera, łatwo zauważyć, że miejscami zerowymi będą liczby \(x_1\) i \(x_2\). Dzięki tej 
+    własności często się sprowadza funkcję do postaci iloczynowej rozwiązując równania kwadratowe.</p>
+
+        </div><!-- obrazekOpis -->
+      </div><!-- prawy -->
+    </div>
+</body>
+</html>
