@@ -67,7 +67,46 @@
 
     </p>
 
+    <p>
+        <h2>Wierzchołek funkcji kwadratowej</h2>
+        Wiemy już, że wykresem funkcji kwadratowej jest parabola. Posiada ona dwa równe ramiona, które wychodzą spod jednego punktu - wierzchołka. <br>
+        Gdy znamy położenie tego punktu i wartość funkcji w tym punkcie, to jesteśmy w stanie wyczytać pewne ważne własności tej funkcji. <br> <br>
 
+        No dobrze, ale jak znaleźć ten punkt? Okazuje się, że mając wyprowadzony wzór ogólny funkcji kwadratowej \(f(x) = ax^2 + bx + c\) jesteśmy w stanie łatwo go uzyskać współrzędne punktu P = (p, q) ze wzoru: <br>
+        <ul>
+            <li>\(p = \frac{-b}{2a}\)
+            <li>\(q = \frac{-\Delta}{4a}\)
+        </ul>
+
+        Na przykład niech \(f(x) = x^2 - 4x + 3\). Wtedy: <br>
+        <ul>
+            <li>\(p = \frac{-(-4)}{2*1} = \frac{4|{2| = 2\) 
+            <li>\(\Delta = (-4)^2 - 4*1*3 = 16 - 12 = 4\) 
+            <li>\(q = \frac{-4}{4*1} = -1\) 
+        </ul>
+        Stąd współrzędne wierzchołka \(P = (2, -1 )\) <br> <br>
+
+        Nie musimy liczyć współrzędnej \(q\) ze wzoru. Mając wyliczoną współrzędną p wystarczy wyliczyć wartość funkcji dla \(x = p\) <br>
+        Podstawiając do naszego przykładu: <br>
+        \(q = f(2) = 2^2 - 4*2 + 3 = 4 - 8 + 3 = -1\) <br> <br>
+
+        Gdy już obliczymy współrzędne wierzchołka paraboli i znamy znak parametru \(a\), jesteśmy w stanie z łatwością wskazać zbiór wartości funkcji. Załóżmy, że wierzchołek \(P = (p, q)\) i Zbiór wartości funkcji to \(W\) . Wtedy mamy trzy przypadki: <br><br>
+        <ul>
+            <li> Gdy \(a < 0\), to \(W = (-\infty, q]\)
+            <li> A jeśli \(a > 0\), to \(W = [q, \infty)\)
+            <li> Jeśli \(a = 0\), to mamy do czynienia z funkcją liniową, czyli \(W = \mathbb{R}\)      
+        </ul>
+          
+        <br>
+
+        Weźmy na przykład funkcję \(g(x) = 3x^2 -4x + 6)\. Liczymy współrzędne wierzchołka p i q i określamy znak parametru \(a\): <br>
+        <ul>
+        <li>\(p = \frac{4}{6} = \frac{2}{3}\)
+        <li>\(q = f(p) = f(\frac{2}{3}) = 3*(\frac{2}{3})^2 - 4*\frac{2}{3} + 6 = 3*\frac{4}{9} - \frac{8}{3} + \frac{18}{3} = \frac{4}{3} + \frac{10}{3} = \frac{14}{3}\)
+        <li>\(a = 3 > 0\)
+        </ul>
+        Stąd Zbiór wartości funkcji \(g\) to \(W = [\frac{14}{3}, \infty)\). <br>
+    </p>
 
 
 
