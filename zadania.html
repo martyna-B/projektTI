@@ -1,132 +1,88 @@
-<!DOCTYPE html>
+<DOCTYPE! html>
 <html>
-    <head>
-        <meta charset="utf8">
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script type="text/javascript" id="MathJax-script" async
-        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-        </script>
-        <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
-        <title>Równania i nierówności kwadratowe</title>
+<head>
+    <meta charset="utf8">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/javascript" charset="UTF-8" src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js"></script>
 
-    </head>
-    <body>
-        <h1>Równania i nierówności kwadratowe</h1>
-        <p>Tutaj zostaną omówione równania i nierówności kwadratowe, a także pokazane będą wzory Viete'a</p>
+    <title>Funkcja kwadratowa</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
 
-        <h2>Równania kwadratowe</h2>
-        <p>
-            <b>Równaniem kwadratowym</b> (z niewiadomą \(x\)) nazywamy równanie, 
-            które można doprowadzić do postaci \(ax^2+bx+c=0\), 
-            przy czym \(a,b,c\) są ustalonymi liczbami rzeczywistymi oraz \(a\neq0\)
-        </p>
-        <p>
-            <div><b>Twierdzenie</b></div>
-            Równanie kwadratowe \(ax^2+bx+c=0\), gdzie \(a\neq0\) i \(\Delta =b^2-4ac\):
-            <li>nie ma rozwiązań wtedy i tylko wtedy, gdy \(\Delta \lt 0\)</li>
-            <li>ma jedno rozwiązanie, \(x_0 =\frac{-b}{2a}\), wtedy i tylko wtedy, gdy \(\Delta =0\)</li>
-            <li>ma dwa rozwiązania, \(x_1 =\frac{-b-\sqrt{\Delta}}{2a}\) i \(x_1 =\frac{-b+\sqrt{\Delta}}{2a}\), wtedy i tylko wtedy, gdy \(\Delta \gt 0\)</li>
-        </p>
-        <h2>Nierówności kwadratowe</h2>
-        <p>
-            <div><b>Nierównością kwadratową</b> (z niewiadomą \(x\)) nazywamy każdą nierówność, 
-            którą można doprowadzić do którejś z następujących postaci:
-            <li>\(ax^2+bx+c\gt 0\)</li>
-            <li>\(ax^2+bx+c\lt 0\)</li>
-            <li>\(ax^2+bx+c\geq 0\)</li>
-            <li>\(ax^2+bx+c\leq 0\)</li>
-            przy czym \(a,b,c\) są ustalonymi liczbami rzeczywistymi i \(a\neq0\)</div>
-        </p>
-        
-        <p>
-            Rozwiązaniem nierówności kwadratowej najczęściej jest przedział, do którego wyznaczenia można zastosować poniższą instrukcję:
-            <ol>
-                <li>Policzyć deltę</li>
-                <li>Znaleźć miejsca zerowe (jeśli są)</li>
-                <li>Narysować parabolę przechodzącą przez miejsca zerowe:</li>
-                <ul>
-                    <li>dla \(a\gt 0\) ramiona skierowane w górę</li>
-                    <li>dla \(a\lt 0\) ramiona skierowane w dół</li>
-                </ul>
-                <li>Dla następujących znaków mamy rozwiązania:</li>
-                <ul>
-                    <li>\(\gt / \geq x\) dla których część wykresu znajduje się <b>nad</b> osią \(OX\) (odpowiednio przedział otwarty/domknięty)</li>
-                    <li>\(\lt / \leq x\) dla których część wykresu znajduje się <b>pod</b> osią \(OX\) (odpowiednio przedział otwarty/domknięty)</li>
-                </ul>
-            </ol>
-        </p>
+</head>
+<body>
+    <p>
+        <h2>Zadania do samodzielnego rozwiązania</h2>
+        <h3>Zadanie 1</h3>
+        Naszkicuj wykres funkcji: <br>
+        <ol type="I">
+            <li>\(f(x) = x^2 - 6x + 5\)
+            <li>\(g(x) = -x^2 + 3x - 4\)</li>
+            <li>\(h(x) = \frac{1}{4} x^2 + 2x\)</li>
+        </ol>
 
-        <h2>Wzory Viete'a</h2>
-        <p>
-            <div><b>Twierdzenie</b></div>
-            Jeśli \(x_1 ,x_2 \) są różnymi miejscami zerowymi funkcji kwadratowej \(y=ax^2+bx+c (a\neq 0)\), to zachodzą związki:
-            <li>\(x_1 + x_2 = \frac{-b}{a}\)</li>
-            <li>\(x_1 \cdot x_2 = \frac{c}{a}\)</li>
-        </p>
-
-        <p>
-            <h4>Przykład </h4>
-            Rozwiąż równanie: \(x^2-x-6\)<br><br>
-            Wypisujemy współczynniki równania:
-            $$a=1, b=-1, c=-6$$
-            Obliczamy wyróżnik
-            $$\Delta =(-1)^2-4\cdot 1\cdot (-6)=25;~~\sqrt{\Delta }=5 \gt 0$$
-            Zatem równanie ma dwa różne rozwiązania:
-            $$x_1 =\frac{-(-1)-5}{2\cdot 1}=-2,~~ x_2 =\frac{-(-1)+5}{2\cdot 1}=3$$
-            Więc rozwiązania to -2 i 3. 
-        </p>
-
-        <p>
-            <h4>Przykład</h4>
-            Rozwiąż równanie: \(x^4 + 5x^2 -14=0\)<br><br>
-            Podstawiamy \(t\) za \(x^2\), otrzymujemy następujące równanie
-            $$t^2 +5t-14=0$$
-            Obliczamy deltę
-            $$\Delta =5^2-4\cdot 1\cdot (-14)=81;~~\sqrt{\Delta}=9$$
-            Zatem
-            $$t_1=\frac{-5-9}{2}=2,~~ t_2=\frac{-(-5)+9}{2}=-7$$
-            Czyli
-            $$x_1 ^2=2,~~ x_2 ^2=-7$$
-            Jednakże ponieważ \(x^2\geq 0, x^2\neq -7\), więc
-            $$x^2=2$$
-            $$x_1 =\sqrt{2},~~x_2 =-\sqrt{2}$$
-
-        </p>
-        <p>
-            <h4>Przykład </h4>
-            Rozwiąż nierówność: \(4x\geq x^2 \)<br><br>
-            Nierówność doprowadzamy do postaci \(x^2+bx+c \geq 0 (a\neq 0)\)
-            $$-x^2 - 4x \geq 0$$
-            Wyłączamy \(x\) przed nawias i odczytujemy miejsca zerowe
-            $$-x(x-4)\geq 0$$
-            $$x_1 =0,~~x_2=4$$
-            Współczynnik przy \(x^2\) jest ujemny, szkicujemy wykres funkcji i znaznaczamy \(x\) dla których wartości funkcji są nieujemne:
-            <div id="box0" class="jxgbox" style="width:600px; height:400px;"></div>
+        <h3>Zadanie 2</h3>
+        Poniżej przedstawiono fragment wykresu funkcji \(f(x) = x^2 - x + c\) <br> <br>
+                <div id="box1" class="jxgbox" style="width:300px; height:300px;"></div>
                 <script type="text/javascript">
-                    var board = JXG.JSXGraph.initBoard('box0', {boundingbox: [-2, 6, 6, -4], axis:true});
-                    var graph = board.create('functiongraph',
-                                [function(x){ return -x*x + 4*x;}, ]
-                            )
-                    var point1 = board.create('point', [4, 0],{name:'',size:2});
-                    var point2 = board.create('point', [0, 0],{name:'',size:2});
-                    var line1 = board.create('line',[[0,0],[4,0]], {straightFirst:false, straightLast:false, strokeWidth:1, strokeColor:'#ff0000'});
-                    
-                </script>
-        </p>
-        <p>
-            <h4>Przykład</h4>
-            Rozwiąż nierówność: \(5x^2 - 3x +2 \lt 0 \)<br><br>
-            Obliczymy wyróżnik
-            $$\Delta =(-3)^2-4\cdot 5\cdot 2=-31 \lt 0$$
-            Zatem nierówność nie ma miejsc zerowych.<br>
-            Ponieważ \(a=5\gt 0\), parabola znajduje się w całości nad osią \(OX\).
-            <div id="box1" class="jxgbox" style="width:600px; height:400px;"></div>
-                <script type="text/javascript">
-                    var board1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-4, 8, 4, -1], axis:true});
+                    var board1 = JXG.JSXGraph.initBoard('box1', {boundingbox: [-3, 10, 5, -4], axis:true});
                     var graph1 = board1.create('functiongraph',
-                                [function(x){ return 5*x*x -3*x+2;}, ]);
-                </script>
-            Wynika stąd, że \(x\in \emptyset \)
-        </p>
-    </body>
-</html>
+                              [function(x){ return x*x - x - 2;}, ]
+                              );
+                </script><BR> 
+        Ile wynosi \(c\)? <br>
+        Podaj miejsca zerowe funkcji \(f\) <br>
+
+        <h3>Zadanie 3</h3>
+        Oblicz wyróżnik trójmianu kwadratowego (\(\Delta\)) poniższych wyrażeń. <br>
+        <ol type="I">
+            <li> \(x^2 + 4x + 7\)
+            <li> \(-x^2 - 3x + 2\)
+            <li> \(\frac{1}{5} x^2 - \frac{2}{3} x + 5\)
+            <li> \(-\frac{2}{3} x^2 + \sqrt{2} x - \frac{3}{2}\)
+        </ol>
+
+        <h3>Zadanie 4</h3>
+        Czy funkcja \(f(x) = x^2 + 4x - 3\) ma miejsce zerowe? Jeśli tak, to ile? <br>
+        A funckcja \(g(x) = -x^2 + 3x - 4\)? Odpowiedzi uzasadnij. <br>
+
+        <h3>Zadanie 5</h3>
+        Wyznacz punkty wierzchołków wykresów poniższych funkcji bez szkicowania: <br>
+        <ol type="I">
+            <li> \(a(x) = 4x^2 - x + 15\)
+            <li> \(b(x) = \sqrt{\frac{2}{3}} x^2 - \sqrt{\frac{3}{2}} x + 1\)
+            <li> \(c(x) = x^2 - 3\)
+        </ol>
+
+        <h3>Zadanie 6</h3>
+        Podaj zbiór wartości funkcji \(f(x) = x^2 - x + 2\) oraz \(g(x) = -x^2 + 2x - \frac{2}{7}\) oraz \(h(x) = -(x+2)(x-4)\). <br>
+        
+        <h3>Zadanie 7</h3>
+        Znajdź postaci kanoniczne i iloczynowe poniższych funkcji: <br>
+        <ol type="I">
+            <li> \(f(x) = x^2 - 2x + 3\)
+            <li> \(g(x) = -x^2 - 5x + 6\)
+            <li> \(h(x) = \frac{2}{3} x^2 + 3\sqrt{2} x\)
+        </ol>
+        <h3>Zadanie 8</h3>
+        Rozwiąż równania: <br>
+        <ol type="I">
+            <li> \(x^2 + 5x - 6 = 0\)
+            <li> \(-x^2 - 3x = x + 4\)
+            <li> \(x^4 = +3x^2 - 2\)</li>
+        </ol>
+
+        <h3>Zadanie 9</h3>
+        Rozwiąż nierówności: <br>
+        <ol type="I">
+            <li> \(x^2 - 3 > 0\)
+            <li> \(3x^2 + 4x - 2 > 5x + 3\)
+            <li> \(\frac{2}{3} x^2 - 2\sqrt{\frac{3}{2}} x < \frac{3}{2}\)
+            <li> \(x^4 -x^2 + 6 \geq -x^4 + 3x^2 + 4 \)
+        </ol>
+
+        <h3>Zadanie 10</h3>
+        Dla jakich wartości funkcji \(g(x) = 4x^2 - 5x + 3\) oraz \(f(x) = -3x^2 + 4x - 7\) są sobie równe? <br>
+    </p>
+
+</body>
